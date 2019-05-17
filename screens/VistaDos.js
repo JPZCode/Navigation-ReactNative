@@ -1,21 +1,27 @@
 import React from 'react';
-import { StyleSheet, Text, View} from 'react-native';
+import { StyleSheet, Text, View, ScrollView} from 'react-native';
 
 export default class App extends React.Component {
 
    render() {
     return (
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         <View style={styles.div}>
-          <Text>Contenedor Superior</Text>
+          <Text>Contenedor Uno</Text>
         </View>
         <View style={styles.div}>
-          <Text>Contenedor Medio</Text>
+          <Text>Contenedor Dos</Text>
         </View>
         <View style={styles.div}>
-          <Text>Contenedor Inferior</Text>
+          <Text>Contenedor Tres</Text>
         </View>
-      </View>
+        <View style={styles.div}>
+          <Text>Contenedor Cuatro</Text>
+        </View>
+        <View style={styles.div}>
+          <Text>Contenedor Cinco</Text>
+        </View>
+      </ScrollView>
     );
   }
 }
@@ -25,8 +31,10 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   div: {
-    flex: 2,
+    flex: 1,
+    height: 180,
+    width: '100%',
     backgroundColor: 'gray',
-    margin: '10px',
+    marginTop: 10,
   }
 });
