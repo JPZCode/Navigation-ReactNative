@@ -1,56 +1,70 @@
 import React from 'react';
-import { StyleSheet, View , Text, TouchableOpacity} from 'react-native';
+import {StyleSheet,View,TouchableOpacity,Text} from 'react-native';
 
- class TabBar extends React.Component {
+import { withNavigation } from 'react-navigation';
 
-  navigate=route=>{
-    const {navigate}=this.props;
-    switch(route){
-      case "Coloruno":
-        navigation.navigate({
-          routeName: "Coloruno"
-      })
-      break
-      case "Colordos":
-        navigation.navigate({
-          routeName: "Colordos"
-      })
-      break
+class TabBar extends React.Component{
+    
+    navigate=route=>{
+        const {navigation}=this.props;
+        switch(route){
+            case "Coloruno":
+            navigation.navigate({
+                routeName:"Coloruno"
+            })
+            break
+            case "Colordos":
+            navigation.navigate({
+                routeName:"Colordos"
+            })
+            break
+        }
     }
-  }
-  rederTab=({route}) => {
-    const {selected}=this.props;
-    return(
-      <TouchableOpacity
-        onPress={()=>this.navigate(route)}>
-        <Text>route</Text>
-      </TouchableOpacity>
-    )
-  }
 
-  render() {
-    return(
-      <View>
-        {this.renderTab({route:"Coloruno"})}
-        {this.renderTab({route:"Colordos"})}
-      </View>
-    );
-  }
+    renderTab=({route})=>{
+        const {selected}=this.props;
+        return(
+            <TouchableOpacity style={styles.tab} onPress={()=>this.navigate(route)}>
+                <Text>{route}</Text>
+                {selected===route&&<View style={styles.tabLine}/>}
+            </TouchableOpacity>    
+        )
+    }
+    
+    render(){
+        return(
+            <View style={styles.container}>
+                {this.renderTab({route: "Coloruno"})}
+                {this.renderTab({route: "Colordos"})}
+            </View>
+        )
+    }
 }
 
-export default withNavigation(TabBar);
-
 const styles = StyleSheet.create({
-  container: {
-    height: 56,
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'flex-start',
-    backgroundColor: '#eeeeee'
-  },
-  tab: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  }
-});
+    container:{
+        height: 56,
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'flex-start',
+        backgroundColor: '#eeeee'
+    },
+    tab: {
+      flex: 1,
+      //backgroundColor: 'green',
+      alignItems: 'center',
+      justifyContent: 'center',
+      flexDirection: 'column',
+    },
+    tabLine:{
+        position: 'absolute',
+        backgroundColor:'green',
+        height:4,
+        left: 16,
+        right:16,
+        bottom:5
+    }
+
+  });
+
+export default withNavigation(TabBar);
