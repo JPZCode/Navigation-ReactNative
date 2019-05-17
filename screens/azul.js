@@ -1,11 +1,14 @@
 import React, {Component} from 'react';
 import { StyleSheet, View , Text} from 'react-native';
 
-export default class Secret extends Component {
+import TabBar from "../components/TabBar";
+
+export default class Azul extends Component {
   render() {
     return(
       <View style={styles.container}>
         <Text>Vista AZUL</Text>
+        <TabBar selected="Coloruno"/>
       </View>
     );
   }
