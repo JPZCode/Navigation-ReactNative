@@ -3,12 +3,12 @@ import { StyleSheet, View , Text} from 'react-native';
 
 import TabBar from "../components/TabBar";
 
-export default class Secret extends Component {
+export default class Rojo extends Component {
   render() {
     return(
       <View style={styles.container}>
         <Text>Vista ROJO</Text>
-        <TabBar selected="Colordos"/>
+        <TabBar selected="Rojo"/>
       </View>
     );
   }
@@ -17,6 +17,12 @@ export default class Secret extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'red'
+    backgroundColor: 'red',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'column',
+  },
+  text: {
+    fontSize: 20,
   }
 });

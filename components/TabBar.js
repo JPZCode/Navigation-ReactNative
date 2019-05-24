@@ -10,12 +10,12 @@ class TabBar extends React.Component{
         switch(route){
             case "Coloruno":
             navigation.navigate({
-                routeName:"Coloruno"
+                routeName:"Azul"
             })
             break
             case "Colordos":
             navigation.navigate({
-                routeName:"Colordos"
+                routeName:"Rojo"
             })
             break
         }
@@ -42,28 +42,27 @@ class TabBar extends React.Component{
 }
 
 const styles = StyleSheet.create({
-    container:{
-        height: 56,
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'flex-start',
-        backgroundColor: '#eeeee'
-    },
-    tab: {
-      flex: 1,
-      //backgroundColor: 'green',
-      alignItems: 'center',
-      justifyContent: 'center',
-      flexDirection: 'column',
-    },
-    tabLine:{
-        position: 'absolute',
-        backgroundColor:'green',
-        height:4,
-        left: 16,
-        right:16,
-        bottom:5
-    }
+  container:{
+    height: 56,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#eeeeee'
+  },
+  tab: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'column',
+  },
+  tabLine:{
+    position: 'absolute',
+    backgroundColor:'green',
+    height:4,
+    left: 16,
+    right:16,
+    bottom:5
+  }
 
   });
 

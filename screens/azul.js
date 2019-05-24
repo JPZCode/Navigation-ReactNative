@@ -7,8 +7,8 @@ export default class Azul extends Component {
   render() {
     return(
       <View style={styles.container}>
-        <Text>Vista AZUL</Text>
-        <TabBar selected="Coloruno"/>
+        <Text style={styles.text}>Vista AZUL</Text>
+        <TabBar selected="Azul"/>
       </View>
     );
   }
@@ -17,6 +17,15 @@ export default class Azul extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'blue'
+    backgroundColor: 'blue',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'column'
+  },
+  text: {
+    flex: 1,
+    fontSize: 30,
+    textAlign: 'center',
+    color: '#fff'
   }
 });

@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View, ScrollView} from 'react-native';
 
+import TabBar from "../components/TabBar";
+
 export default class App extends React.Component {
 
    render() {
@@ -21,6 +23,7 @@ export default class App extends React.Component {
         <View style={styles.div}>
           <Text>Contenedor Cinco</Text>
         </View>
+        <TabBar selected="Azul"/>
       </ScrollView>
     );
   }

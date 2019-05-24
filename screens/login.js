@@ -35,7 +35,7 @@ export default class App extends React.Component {
             style={styles.Button}
             onPress={() => this._navigate()}
             title="Log in"/>
-            <Button 
+          <Button 
             style={styles.Button}
             onPress={() => this._navigate()}
             title="Forgotten your Password?"/>
