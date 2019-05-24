@@ -1,12 +1,12 @@
-import { createStackNavigator, createAppContainer } from 'react-navigation';
+import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 
 import Login from '../screens/login';
-import Vista2 from '../screens/VistaDos';
+import Dos from '../screens/VistaDos';
 import Azul from '../screens/rojo';
 import Rojo from '../screens/azul';
 
 
-const navigator = createAppContainer(createStackNavigator({
+const navigator = createAppContainer(createSwitchNavigator({
 
   login: {
     screen: Login,
@@ -14,8 +14,8 @@ const navigator = createAppContainer(createStackNavigator({
       header: null
     }
   },
-  Vista2: {
-    screen: Vista2
+  Dos: {
+    screen: Dos
   },
   Rojo: {
     screen: Rojo
